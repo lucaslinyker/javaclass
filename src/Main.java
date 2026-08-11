@@ -16,5 +16,8 @@ public class Main {
 
         MagicalCharacter knight = new MagicalCharacter("White");
         System.out.println(knight.name + " Energy: " + knight.energyLevel + " Power: " + knight.magicalPower);
+
+        int x = new Method().calc(1, 2);
+        System.out.printf("Calc: %d", x);
     }
 }
