@@ -5,9 +5,6 @@ public class MagicalCharacter {
 
     SpecialHability specialHability;
 
-    // extremely recommended
-    public MagicalCharacter() {}
-
     // constructor method (most common appear after attributes)
     public MagicalCharacter(String name, int energy, String magicalPower) {
         this.name = name;
@@ -18,4 +15,7 @@ public class MagicalCharacter {
     public MagicalCharacter(String name) {
         this.name = name;
     }
+
+    // extremely recommended
+    public MagicalCharacter() {}
 }
