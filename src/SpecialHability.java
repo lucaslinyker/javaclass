@@ -8,4 +8,8 @@ public class SpecialHability {
         this.energyCost = energyCost;
         this.active = active;
     }
+
+    public void activateHability() {
+        active = true;
+    }
 }

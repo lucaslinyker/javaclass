@@ -11,6 +11,10 @@ public class ViewCharacter {
                     Magical character program!
                     1 - Register a character
                     2 - Display character
+                    3 - Attack
+                    4 - Increase energy
+                    5 - Use special ability
+                    6 - Activate special ability
                     0 - Exit
                     Chose an option:\s"""
             );
@@ -51,6 +55,23 @@ public class ViewCharacter {
                     } else {
                         System.out.println("No special ability registered yet.");
                     }
+                    break;
+                case "3":
+                    System.out.print("Type a name for attack: ");
+                    String attack = sc.nextLine();
+                    wizard.attack(attack);
+                    break;
+                case "4":
+                    System.out.print("Type an amount of energy to increase: ");
+                    int energy = sc.nextInt();
+                    sc.nextLine();
+                    wizard.increaseEnergy(energy);
+                    break;
+                case "5":
+                    wizard.activateSpecialHability();
+                    break;
+                case "6":
+                    wizard.specialHability.activateHability();
                     break;
                 case "0":
                     System.out.println("Exiting...");
