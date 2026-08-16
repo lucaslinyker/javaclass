@@ -3,7 +3,7 @@ public class MagicalCharacter {
     String magicalPower;
     int energyLevel;
 
-    SpecialHability specialHability;
+    SpecialAbility specialAbility;
 
     // constructor method (most common appear after attributes)
     public MagicalCharacter(String name, int energy, String magicalPower) {
@@ -33,12 +33,12 @@ public class MagicalCharacter {
         return energyLevel;
     }
 
-    public void activateSpecialHability() {
-        if (!specialHability.active) {
+    public void activateSpecialAbility() {
+        if (!specialAbility.active) {
             System.out.println("Special ability is not active.");
-        } else if (energyLevel >= specialHability.energyCost) {
-            System.out.println("Activating special ability: " + specialHability.name);
-            energyLevel -= specialHability.energyCost;
+        } else if (energyLevel >= specialAbility.energyCost) {
+            System.out.println("Activating special ability: " + specialAbility.name);
+            energyLevel -= specialAbility.energyCost;
         } else {
             System.out.println(name + " does not have enough energy to special ability.");
         }

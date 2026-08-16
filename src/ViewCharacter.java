@@ -33,8 +33,8 @@ public class ViewCharacter {
                     sc.nextLine();
                     
                     System.out.print("Type a name of the special ability: ");
-                    String specialAbility = sc.nextLine();
-                    
+                    String name = sc.nextLine();
+
                     System.out.print("Type a number for energy cost: ");
                     int energyCost = sc.nextInt();
 
@@ -43,15 +43,15 @@ public class ViewCharacter {
                     sc.nextLine();
 
                     // Create an object representing the special ability with the values provided by the user
-                    SpecialHability specialHability = new SpecialHability(specialAbility, energyCost, active);
+                    SpecialAbility specialAbility = new SpecialAbility(name, energyCost, active);
                     // Assign the special ability to the character
-                    wizard.specialHability = specialHability;
+                    wizard.specialAbility = specialAbility;
                     break;
                 case "2":
                     sc.reset();
                     System.out.println("Name: " + wizard.name + ", Energy: " + wizard.energyLevel + ", Power: " + wizard.magicalPower);
-                    if (wizard.specialHability != null) {
-                        System.out.println("Special Ability: " + wizard.specialHability.name + ", Energy Cost: " + wizard.specialHability.energyCost + ", Active: " + wizard.specialHability.active);
+                    if (wizard.specialAbility != null) {
+                        System.out.println("Special Ability: " + wizard.specialAbility.name + ", Energy Cost: " + wizard.specialAbility.energyCost + ", Active: " + wizard.specialAbility.active);
                     } else {
                         System.out.println("No special ability registered yet.");
                     }
@@ -68,10 +68,10 @@ public class ViewCharacter {
                     wizard.increaseEnergy(energy);
                     break;
                 case "5":
-                    wizard.activateSpecialHability();
+                    wizard.activateSpecialAbility();
                     break;
                 case "6":
-                    wizard.specialHability.activateHability();
+                    wizard.specialAbility.activateAbility();
                     break;
                 case "0":
                     System.out.println("Exiting...");
