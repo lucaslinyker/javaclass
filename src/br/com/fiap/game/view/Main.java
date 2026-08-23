@@ -1,3 +1,7 @@
+package br.com.fiap.game.view;
+
+import br.com.fiap.game.model.MagicalCharacter;
+
 public class Main {
     public static void main(String[] args) {
         // instance is the class, creates an object
@@ -8,7 +12,7 @@ public class Main {
         System.out.println(elf.name + " Energy: " + elf.energyLevel + " Power: " + elf.magicalPower);
 
         // When creating a custom `constructor`, you cannot instantiate an object like this (empty):
-        // MagicalCharacter elf = new MagicalCharacter();
+        // br.com.fiap.game.model.MagicalCharacter elf = new br.com.fiap.game.model.MagicalCharacter();
         // elf.name = "Legolas";
         // elf.energyLevel = 50;
         // elf.magicalPower = "Archer";

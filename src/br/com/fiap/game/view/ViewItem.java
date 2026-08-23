@@ -1,3 +1,7 @@
+package br.com.fiap.game.view;
+
+import br.com.fiap.game.model.Item;
+
 import java.util.Scanner;
 
 public class ViewItem {

@@ -1,9 +1,11 @@
-public class MagicalCharacter {
-    String name;
-    String magicalPower;
-    int energyLevel;
+package br.com.fiap.game.model;
 
-    SpecialAbility specialAbility;
+public class MagicalCharacter {
+    public String name;
+    public String magicalPower;
+    public int energyLevel;
+
+    public SpecialAbility specialAbility;
 
     // constructor method (most common appear after attributes)
     public MagicalCharacter(String name, int energy, String magicalPower) {

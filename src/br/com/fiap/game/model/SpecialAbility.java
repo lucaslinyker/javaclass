@@ -1,7 +1,9 @@
+package br.com.fiap.game.model;
+
 public class SpecialAbility {
-    String name;
-    int energyCost;
-    boolean active;
+    public String name;
+    public int energyCost;
+    public boolean active;
 
     public SpecialAbility(String name, int energyCost, boolean active) {
         this.name = name;

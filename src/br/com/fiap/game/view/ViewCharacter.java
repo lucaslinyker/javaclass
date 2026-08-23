@@ -1,3 +1,8 @@
+package br.com.fiap.game.view;
+
+import br.com.fiap.game.model.MagicalCharacter;
+import br.com.fiap.game.model.SpecialAbility;
+
 import java.util.Scanner;
 
 public class ViewCharacter {
