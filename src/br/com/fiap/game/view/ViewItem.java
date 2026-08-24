@@ -34,7 +34,7 @@ public class ViewItem {
                     break;
                 case 2:
                     if (item != null) {
-                        System.out.println("Name: " + item.name + ", Description: " + item.description + ", Is it rare: " + item.rare + ", Power level: " + item.powerLevel);
+                        System.out.println("Name: " + item.getName() + ", Description: " + item.getDescription() + ", Is it rare: " + item.isRare() + ", Power level: " + item.getPowerLevel());
                     } else {
                         System.out.println("No item registered yet.");
                     }

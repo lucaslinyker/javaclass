@@ -1,11 +1,11 @@
 package br.com.fiap.game.model;
 
 public class MagicalCharacter {
-    public String name;
-    public String magicalPower;
-    public int energyLevel;
+    private String name;
+    private String magicalPower;
+    private int energyLevel;
 
-    public SpecialAbility specialAbility;
+    private SpecialAbility specialAbility;
 
     // constructor method (most common appear after attributes)
     public MagicalCharacter(String name, int energy, String magicalPower) {
@@ -36,13 +36,49 @@ public class MagicalCharacter {
     }
 
     public void activateSpecialAbility() {
-        if (!specialAbility.active) {
+        if (!specialAbility.isActive()) {
             System.out.println("Special ability is not active.");
-        } else if (energyLevel >= specialAbility.energyCost) {
-            System.out.println("Activating special ability: " + specialAbility.name);
-            energyLevel -= specialAbility.energyCost;
+        } else if (energyLevel >= specialAbility.getEnergyCost()) {
+            System.out.println("Activating special ability: " + specialAbility.getName());
+            energyLevel -= specialAbility.getEnergyCost();
         } else {
             System.out.println(name + " does not have enough energy to special ability.");
         }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public MagicalCharacter setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public String getMagicalPower() {
+        return magicalPower;
+    }
+
+    public MagicalCharacter setMagicalPower(String magicalPower) {
+        this.magicalPower = magicalPower;
+        return this;
+    }
+
+    public int getEnergyLevel() {
+        return energyLevel;
+    }
+
+    public MagicalCharacter setEnergyLevel(int energyLevel) {
+        this.energyLevel = energyLevel;
+        return this;
+    }
+
+    public SpecialAbility getSpecialAbility() {
+        return specialAbility;
+    }
+
+    public MagicalCharacter setSpecialAbility(SpecialAbility specialAbility) {
+        this.specialAbility = specialAbility;
+        return this;
     }
 }
